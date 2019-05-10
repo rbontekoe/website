@@ -1,0 +1,12 @@
+version: "3.5"
+services:
+  appli:
+    build:
+      context: .
+    image: website2
+    container_name: appligate3
+    ports:
+      - "8000:8000"
+    tty: true
+    restart: always
+    command: ["gunicorn", "-b", "0.0.0.0:8000", "--access-logfile", "-", "--error-logfile", "-", "web:app"]

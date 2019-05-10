@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>De C4YLO-server</h2>
+    <p>De server draait in de cloud bij Google. De toepassing is zo opgezet dat het bestand is tegen overbelasting en
+        fouten
+        in de software als die optreden. De software is gebouwd volgens de 'reactive infrastructure' principes.</p>
+    <p>De basisunit communiceert rechtstreeks met de C4YLO-server. We versturen geen beelden.</p>
+    <p>De gevens die we versturen hebben de volgende structuur:
+    <p>
+        <strong>Een kamer zonder aanwezigen</strong>
+    <ul>
+        <li>Datum en tijd</li>
+        <li>Identificatienummer van de camera</li>
+    </ul>
+
+    <strong>Een kamer met aanwezige(n)</strong>
+    <ul>
+        <li>Datum en tijd</li>
+        <li>Identificatienummer van de camera</li>
+        <li>De namen van aanwezigen</li>
+        <li>Het waarschuwingsniveau:
+            <ol>
+                <li>Ernstig</li>
+                <li>Attentie</li>
+                <li>Normaal</li>
+            </ol>
+        </li>
+    </ul>
+
+    <p>Bij waarschuwingsniveau 1 - Ernstig - ontvangt u een melding op uw smartphone als:</p>
+    <ul>
+        <li>er gedurende 5 minuten geen aanzienlijke veranderingen worden geconstateerd, maar er wel aanwezigen zijn;
+        </li>
+        <li>er in geen aanwezigen zijn in de kamers die gemonitord worden;</li>
+        <li>er na 5 minuten geen berichten van het basisunit zijn ontvangen.</li>
+    </ul>
+    <p>Niveau 2 wordt afgegeven als er weinig activiteit wordt geconstateerd, terwijl er wel aanwezigen zijn.</p>
+    <p>In alle andere gevallen wordt niveau 3 afgegeven.</p>
+
+    <p style="text-align: center">=====</p>
+
+</div>
+{% endblock %}
+

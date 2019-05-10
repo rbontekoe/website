@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block navbar %}
+<table style="background-color: #635552; border: 0px;" width="100%">
+    <th style="border: 0pc; padding-top: 0.2em; padding-bottom: 0em";><img src="/static/love.png"></th>
+    <tr>
+        <td style="border: 0px; background-color: white; padding: 0.5em;"><img src="/static/appli-logo.png"></td>
+    </tr>
+    <tr>
+        <td style="border: 0px; height: 260px; background-image: url(/static/raster.png); background-repeat: no-repeat; background-size: 300px;">
+            <h1 style="font-style: italic; text-shadow: 1px 1px 1px #000; font-size: 500%; color: #ffd562; text-align: center;">
+                C4YLO</h1>
+            <p style="text-shadow: 1px 1px #000; font-size: 120%; color: #ffd562; text-align: center; font-style: italic;">
+                Care for your loved ones</p>
+        </td>
+    </tr>
+</table>
+{{ nav.mynavbar.render() }}
+{% endblock %}
+
+{% block content %}{% endblock %}
+

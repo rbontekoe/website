@@ -1,0 +1,12 @@
+FROM python
+
+RUN apt-get -q update && \
+    apt-get -qy install \
+	python3-pip \
+	nano wget curl
+
+RUN pip3 install flask flask-wtf flask-bootstrap flask-nav pip python-dotenv gunicorn pillow
+
+WORKDIR ./web
+
+COPY . /web

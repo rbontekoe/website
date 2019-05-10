@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Voor wie je dierbaar is...</h2>
+    <p>Ouderen hebben meer aandacht nodig naarmate hun conditie verslechtert.
+        C4YLO is een oplossing om een oogje in het zeil te houden.
+    <p>
+    <h3>Wat behelst C4YLO?</h3>
+    <p>De oplossing bestaat uit de volgende delen:</p>
+    <lu>
+        <li>Camera-units voor kamers die gemonitord moeten worden.</li>
+        <li>De basisunit die beelden analyseert;</li>
+        <li>De C4YLO-server, die draait in de cloud bij Google;</li>
+        <li>Smartphone, tablet of desktop computer om de informatie te bekijken;</li>
+        <li>En... kids kunnen het systeem uitbreiden met bijvoorbeeld temperatuurmetingen.</li>
+    </lu>
+
+    <h3>De Camera-unit.</h3>
+    <p>Een infrarood 'nacht' camera in combinatie met single board computer neemt eens per 3 seconden
+        een foto en vergelijkt die met de voorgaande.
+        Als de afwijking te groot is wordt de foto doorgestuurd naar het basisunit.</p>
+    <p>Als er na 5 minuten geen afwijkingen zijn geconstateerd, wordt er tevens een foto naar de basisunit gestuurd.</p>
+
+    <h3>De Basisunit.</h3>
+    <p>De basisunit is de lokale server die de foto's die het ontvangt van de camera-units analyseert en het resultaat
+        stuurt naar de C4YLO-server.</p>
+    <p>De herkenningsanalyse wordt uitgevoerd aan de hand van foto's van familieleden en andere bekenden.</p>
+    <p>De foto's worden gedurende twee dagen op het basisunit bewaard.</p>
+    <p>De basisunit stuurt berichten naar het C4YLO-server.</p>
+
+    <h3>De C4YLO-server.</h3>
+    <p>De server draait in de cloud by Google en heeft primair als doel overzichten te genereren aangaande
+        de staat van de kamer waar een camera is opgesteld. De software is opgezet volgens moderne 'reactive' principes,
+        dus belastbaar- en foutbestendig.</p>
+
+    <h3>Smartphone, tablet of desktop computer.</h3>
+    <p>De overzichten kunt u bekijken op een smartphone, tablet of desktopcomputer via de C4YLO website.</p>
+
+    <h3>Voor de kids...</h3>
+    <p>Kids kunnen op verschillende manieren helpen en experimenteren met een Raspberry Pi Zero W.
+        Bijvoorbeeld door zelf de camera-unit in elkaar te zetten, de kamertemperatuur te meten, of berichtjes te
+        sturen naar opa en oma. We komen met een aparte blog waar het uitgelegd wordt hoe ze dat kunnen doen.</p>
+
+    <p style="text-align: center">=====</p>
+</div>
+{% endblock %}
